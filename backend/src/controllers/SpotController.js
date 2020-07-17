@@ -13,7 +13,7 @@ module.exports = {
         const { company, techs, price } = req.body;
         const { user_id } = req.headers;
 
-        const user = await User.findById(user_id);
+        const user = await Users.findById(user_id);
 
         if (!user) {
             return res.status(400).json({ error: 'usuário não existe' })
